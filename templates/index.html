@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Chess</h1>
+    <div id="controls">
+        <label for="difficulty">AI Difficulty:</label>
+        <input type="range" id="difficulty" min="0" max="20" value="20">
+        <span id="levelDisplay">20</span>
+    </div>
+    <div id="board" class="chess-board"></div>
+    <div id="game-over">Game Over</div>
+    <button id="reset">Reset Game</button>
+    <script src="{{ url_for('static', filename='js/chess.js') }}"></script>
+</body>
+</html>
