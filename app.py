@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 import chess
 import chess.engine
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 board = chess.Board()
 engine = chess.engine.SimpleEngine.popen_uci("bin/stockfish")
 
